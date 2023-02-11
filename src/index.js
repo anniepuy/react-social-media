@@ -4,5 +4,5 @@ import App from './App';
 
 
 
-const rootNode = document.getElementsByID("root");
-ReactDOM.render(<App />, rootNode);
+const rootNode = document.getElementById("root");
+ReactDOM.render(<App/>, rootNode);
