@@ -1,11 +1,21 @@
 import React from "react";
 
-function Login() {
+function Login({setUser}) {
+    const [username, setUsername] = React.useState('');
+
+    function handleSubmit(event){
+        event.preventDefault();
+        setUser(username);
+    }
+
     return (
         <div>
            <h2>Login</h2>
-           <form>
-                <input placeholder="Input Username" />
+           <form onSubmit={handleSubmit}>
+                <input
+                    onChange={event => setUsername(event.target.value)} 
+                    placeholder="Input Username" 
+                />
                 <button type="submit">Submit</button>
            </form>
         </div>

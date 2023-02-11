@@ -2,10 +2,10 @@ import React from "react";
 import Login from "./components/Login";
 
 function App() {
-    const user = "";
+    const [user, setUser] = React.useState('');
 
     if (!user) {
-        return <Login />;
+        return <Login setUser={setUser} />;
     }
 
     return (
