@@ -1,8 +1,9 @@
 import React from "react";
 import Login from "./components/Login";
+import Header from "./components/Header";
 
 function App() {
-    const [user, setUser] = React.useState('');
+    const [user, setUser] = React.useState("ann");
 
     if (!user) {
         return <Login setUser={setUser} />;
@@ -10,7 +11,7 @@ function App() {
 
     return (
         <div>
-            App
+            <Header user={user} setUser={setUser}/>
         </div>
     )
 }
