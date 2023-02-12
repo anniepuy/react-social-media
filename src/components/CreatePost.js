@@ -12,6 +12,7 @@ function CreatePost({user, setPosts, posts}) {
         const post = {content, image, user};
         const newPosts = [post, ...posts];
         setPosts(newPosts);
+        setContent('')
     }
 
     return (
@@ -22,6 +23,7 @@ function CreatePost({user, setPosts, posts}) {
                     type="text"
                     placeholder="Add Post Comment"
                     onChange = {event => setContent(event.target.value)}
+                    value={content}
                 />
                 <input
                     type="file"
