@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function CreatePost({user, setPosts, posts}) {
+function CreatePost({user, handleAddPost}) {
     const [content, setContent] = React.useState('');
     const [image, setImage] = React.useState(null);
     const imageInputRef = React.useRef();
@@ -11,8 +11,9 @@ function CreatePost({user, setPosts, posts}) {
         //const post = { content: content, image: image, user: user};
         //shortened version of above
         const post = {content, image, user};
-        const newPosts = [post, ...posts];
-        setPosts(newPosts);
+        handleAddPost(post);
+        /* const newPosts = [post, ...posts];
+        setPosts(newPosts); */
         setContent('')
         imageInputRef.current.value = " ";
     }
