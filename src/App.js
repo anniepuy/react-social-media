@@ -5,6 +5,10 @@ import Header from "./components/Header";
 function App() {
     const [user, setUser] = React.useState("ann");
 
+    React.useEffect(() => {
+        document.title = user ? `${user}'s Feed` : "Please Login";
+    }, [user]);
+
     if (!user) {
         return <Login setUser={setUser} />;
     }
