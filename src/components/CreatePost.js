@@ -14,7 +14,7 @@ function CreatePost({user, setPosts, posts}) {
         const newPosts = [post, ...posts];
         setPosts(newPosts);
         setContent('')
-        imageInputRef.current.value = '';
+        imageInputRef.current.value = " ";
     }
 
     return (
