@@ -2,7 +2,7 @@ import React from "react";
 
 function Post({post}) {
     return (
-        <React.Fragment>
+        <>
             {post.image && (
                 <img
                     style={{height: 100, width: 200, objectFit: "cover"}}
@@ -12,7 +12,7 @@ function Post({post}) {
             )}
             <p>{post.content}</p>
             <div>{post.user}</div> 
-        </React.Fragment>
+        </>
 
     )
 }
