@@ -16,6 +16,7 @@ function Post({image, content, user}) {
             )}
             <p>{content}</p>
             <div style={{color: isCurrentUser && 'green'}}>{user}</div> 
+            {isCurrentUser && <button>Delete</button>}
         </>
     )
 }
