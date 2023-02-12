@@ -1,19 +1,10 @@
 import React from "react";
+import Post from "./Post";
 
 function PostList({ posts }) {
     return (    
         posts.map((post, i) => (
-            <React.Fragment key={i}>
-                {post.image && (
-                    <img
-                        style={{height: 100, width: 200, objectFit: "cover"}}
-                        src ={URL.createObjectURL(post.image)}
-                        alt="Post Cover"
-                    />
-                )}
-                <p>{post.content}</p>
-                <div>{post.user}</div> 
-            </React.Fragment>
+            <Post key={i} post={post} />
         ))
     )
 }
